@@ -1,3 +1,7 @@
+*{
+  outline: none !important;
+}
+
 body {
   margin: 0;
   font-family: "poppins";
@@ -63,4 +67,39 @@ body {
   text-align: center;
   font-size: 1.2em;
   font-weight: bold;
+}
+
+form {
+  padding: 20px;
+}
+
+input {
+  border-radius: 20px;
+  padding: 1em;
+  height: 40px;
+  font-family: 'poppins';
+  font-weight: bold;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 6px 0;
+  background: #3c1f3c;
+  color: #fff;
+  border: 0;
+}
+
+input[type='submit'] {
+  margin: 10px auto;
+  background: #eee;
+  border: 0;
+  padding: 6px 20px;
+  display: block;
+}
+
+input[type='submit']:hover {
+  color: #fff;
+  background: #553055;
 }
