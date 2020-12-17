@@ -3,7 +3,12 @@ import { bookReducer } from "../reducers/bookReducer";
 
 export const BookContext = createContext();
 const BookContextProvider = (props) => {
-  const [books, dispatch] = useReducer(bookReducer, []);
+  const [books, dispatch] = useReducer(bookReducer, [], () => {
+    const localParams = localStorage.getItem("books");
+    if (localParams) {
+      return JSON.parse(localParams);
+    } else return [];
+  });
 
   //Passing and storing data to local storage
   useEffect(() => {
